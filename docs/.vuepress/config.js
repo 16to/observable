@@ -3,8 +3,8 @@ import { defineUserConfig } from 'vuepress'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 import { searchPlugin } from '@vuepress/plugin-search'
 
-export default defineUserConfig({
 
+export default defineUserConfig({
   lang: 'zh-CN',
   locales: {
     '/en/': {
@@ -20,6 +20,7 @@ export default defineUserConfig({
   },
 
   theme: defaultTheme({
+    colorModeSwitch: false, // 隐藏切换按钮
     locales: {
       '/en/': {
         selectLanguageText: '🌐',
@@ -67,15 +68,16 @@ export default defineUserConfig({
   plugins: [
     searchPlugin({
       locales: {
-        '/': {
+        '/en/': {
           placeholder: 'Search',
         },
-        '/zh/': {
+        '/': {
           placeholder: '搜索',
         },
       },
     }),
   ],
+  
 
   bundler: webpackBundler(),
 })

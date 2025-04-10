@@ -1,4 +1,3 @@
-<template><div><p>playground</p>
-</div></template>
+<template><div><PlaygroundComponent /></div></template>
 
 

@@ -1,5 +1,5 @@
 import comp from "/Users/zhangjie/Desktop/observable-doc/observable/docs/.vuepress/.temp/pages/news/index.html.vue"
-const data = JSON.parse("{\"path\":\"/news/\",\"title\":\"\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"news/readme.md\"}")
+const data = JSON.parse("{\"path\":\"/news/\",\"title\":\"\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[],\"git\":{\"updatedTime\":1743676033000,\"contributors\":[{\"name\":\"16to\",\"username\":\"16to\",\"email\":\"zj@16to.com\",\"commits\":1,\"url\":\"https://github.com/16to\"}],\"changelog\":[{\"hash\":\"9ab3f83806b1389ec9efaaede6ee36467671c976\",\"time\":1743676033000,\"email\":\"zj@16to.com\",\"author\":\"16to\",\"message\":\"base 0.1\"}]},\"filePathRelative\":\"news/readme.md\"}")
 export { comp, data }
 
 if (import.meta.webpackHot) {
