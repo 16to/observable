@@ -14,13 +14,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Home",
-    "headers": [],
-    "path": "/en/",
-    "pathLocale": "/en/",
-    "extraFields": []
-  },
-  {
     "title": "",
     "headers": [],
     "path": "/links/",
@@ -28,7 +21,14 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Demo演示",
+    "title": "Home",
+    "headers": [],
+    "path": "/en/",
+    "pathLocale": "/en/",
+    "extraFields": []
+  },
+  {
+    "title": "演示Demo",
     "headers": [],
     "path": "/playground/",
     "pathLocale": "/",

@@ -1,16 +1,3 @@
 import comp from "/Users/zhangjie/Desktop/observable-doc/observable/docs/.vuepress/.temp/pages/playground/index.html.vue"
-const data = JSON.parse("{\"path\":\"/playground/\",\"title\":\"Demo演示\",\"lang\":\"zh-CN\",\"frontmatter\":{\"layout\":\"Layout\",\"sidebar\":false,\"footer\":false,\"title\":\"Demo演示\",\"pageClass\":\"playground-page\"},\"headers\":[],\"git\":{\"updatedTime\":1743676033000,\"contributors\":[{\"name\":\"16to\",\"username\":\"16to\",\"email\":\"zj@16to.com\",\"commits\":1,\"url\":\"https://github.com/16to\"}],\"changelog\":[{\"hash\":\"9ab3f83806b1389ec9efaaede6ee36467671c976\",\"time\":1743676033000,\"email\":\"zj@16to.com\",\"author\":\"16to\",\"message\":\"base 0.1\"}]},\"filePathRelative\":\"playground/readme.md\"}")
+const data = JSON.parse("{\"path\":\"/playground/\",\"title\":\"演示Demo\",\"lang\":\"zh-CN\",\"frontmatter\":{\"layout\":\"Layout\",\"sidebar\":false,\"footer\":false,\"title\":\"演示Demo\",\"pageClass\":\"playground-page\"},\"headers\":[],\"git\":{\"updatedTime\":1744268125000,\"contributors\":[{\"name\":\"16to\",\"username\":\"16to\",\"email\":\"zj@16to.com\",\"commits\":2,\"url\":\"https://github.com/16to\"}],\"changelog\":[{\"hash\":\"e352b4cc3c26c1af9b381895fc2a841b3e44dcde\",\"time\":1744268125000,\"email\":\"zj@16to.com\",\"author\":\"16to\",\"message\":\"playground is done\"},{\"hash\":\"9ab3f83806b1389ec9efaaede6ee36467671c976\",\"time\":1743676033000,\"email\":\"zj@16to.com\",\"author\":\"16to\",\"message\":\"base 0.1\"}]},\"filePathRelative\":\"playground/readme.md\"}")
 export { comp, data }
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updatePageData) {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ data }) => {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  })
-}

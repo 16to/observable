@@ -5,6 +5,7 @@ import { searchPlugin } from '@vuepress/plugin-search'
 
 
 export default defineUserConfig({
+  dest:'./static',
   lang: 'zh-CN',
   locales: {
     '/en/': {
@@ -29,7 +30,21 @@ export default defineUserConfig({
           link: '/en/'
         }, {
           text: 'Playground',
-          link: '/en/playground/'
+          link: '/en/playground/',
+          children: [{
+            text: 'AOM Demo',
+            target: '_blank',
+            link: '/en/playground/',
+          }, {
+            text: 'APM Demo',
+            target: '_blank',
+            link: '/en/playground/apm/',
+          }, {
+            text: 'LTS Demo',
+            target: '_blank',
+            link: '/en/playground/lts/',
+          }
+          ]
         }, {
           text: 'Practices',
           link: '/en/bests/'
@@ -47,8 +62,22 @@ export default defineUserConfig({
         navbar: [{
           link: '/'
         }, {
-          text: 'Demo演示',
-          link: '/playground/'
+          text: '演示Demo',
+          link: '/playground/',
+          children: [{
+            text: '可观测演示',
+            target: '_blank',
+            link: '/playground/',
+          }, {
+            text: 'APM演示',
+            target: '_blank',
+            link: '/playground/apm/',
+          }, {
+            text: 'LTS演示',
+            target: '_blank',
+            link: '/playground/lts/',
+          }
+          ]
         }, {
           text: '最佳实践',
           link: '/bests/'
@@ -77,7 +106,7 @@ export default defineUserConfig({
       },
     }),
   ],
-  
+
 
   bundler: webpackBundler(),
 })
