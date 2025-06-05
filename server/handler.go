@@ -8,6 +8,12 @@ import (
 
 // LoginHandler 返回登录地址
 func LoginHandler() http.HandlerFunc {
+
+	client := initClient()
+
+	// Obtain a temporary access key and security token through a token.
+	createTemporaryAccessKeyByToken(client)
+
 	return func(w http.ResponseWriter, r *http.Request) {
 		// 设置响应头为JSON格式
 		w.Header().Set("Content-Type", "application/json")

@@ -1,9 +1,9 @@
 .PHONY: build run test clean
 
 build:
-	go build -o bin/webservice ./cmd/webservice
+	go build -o bin/webservice .
 
-run: build
+run: 
 	./bin/webservice
 
 test:
