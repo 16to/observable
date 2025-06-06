@@ -28,16 +28,37 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "演示Demo",
+    "title": "",
     "headers": [],
-    "path": "/playground/",
+    "path": "/news/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "",
+    "title": "统一可观测",
     "headers": [],
-    "path": "/news/",
+    "path": "/playground/aom.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "统一可观测",
+    "headers": [],
+    "path": "/playground/apm.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "统一可观测",
+    "headers": [],
+    "path": "/playground/ces.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "统一可观测",
+    "headers": [],
+    "path": "/playground/lts.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -63,9 +84,30 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "",
+    "title": "统一可观测",
     "headers": [],
-    "path": "/en/playground/",
+    "path": "/en/playground/aom.html",
+    "pathLocale": "/en/",
+    "extraFields": []
+  },
+  {
+    "title": "应用性能",
+    "headers": [],
+    "path": "/en/playground/apm.html",
+    "pathLocale": "/en/",
+    "extraFields": []
+  },
+  {
+    "title": "云监控",
+    "headers": [],
+    "path": "/en/playground/ces.html",
+    "pathLocale": "/en/",
+    "extraFields": []
+  },
+  {
+    "title": "日志服务",
+    "headers": [],
+    "path": "/en/playground/lts.html",
     "pathLocale": "/en/",
     "extraFields": []
   },
@@ -77,16 +119,3 @@ export const SEARCH_INDEX = [
     "extraFields": []
   }
 ]
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ searchIndex }) => {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  })
-}

@@ -1,17 +1,35 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { onMounted } from 'vue'
 
-const params = computed(() => {
-  const uri = 'https://arms-unify-demo-arms-unify-demo-awqlqbyvcc.cn-hangzhou.fcapp.run';
-  return {
-    uri,
+const props = defineProps({
+  service: String,
+  lang: String,
+})
+
+const fetchLoginUrl = async (service,lang) => {
+  try {
+    const response = await fetch('/login?service=' + service + '&lang=' + lang)
+    if (!response.ok) {
+      throw new Error('Failed to fetch login URL')
+    }
+    const data = await response.json()
+    console.log(data)
+    return data.login_url
+  } catch (error) {
+    console.error('Error fetching login URL:', error)
   }
+}
+
+onMounted( async () => {
+  console.log(props.service)
+  const loginUrl = await fetchLoginUrl(props.service,props.lang)
+  window.location.href = loginUrl
 })
 
 </script>
 
 <template>
-  <iframe :src="params.uri" class="frame"> </iframe>
+  Loading...
 </template>
 
 <style scoped>

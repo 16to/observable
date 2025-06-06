@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"net/url"
 
 	coreGlobal "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/auth/global"
 	coreConfig "github.com/huaweicloud/huaweicloud-sdk-go-v3/core/config"
@@ -10,14 +11,6 @@ import (
 	model "github.com/huaweicloud/huaweicloud-sdk-go-v3/services/iam/v3/model"
 	"github.com/huaweicloud/huaweicloud-sdk-go-v3/services/iam/v3/region"
 )
-
-// func main() {
-// 	client := initClient()
-
-// 	// Obtain a temporary access key and security token through a token.
-// 	createTemporaryAccessKeyByToken(client)
-
-// }
 
 func initClient() *iam.IamClient {
 	// 加载配置
@@ -69,9 +62,10 @@ func getPolice() *model.ServicePolicy {
 	}
 }
 
-func createTemporaryAccessKeyByToken(client *iam.IamClient) {
-	// (Optional) Validity period of the AK, SK, and security token, in seconds. Value range: [900,86400]. The default value is 900.
-	var durationSeconds int32 = 900
+func getLoginUrl(service string, lang string) string {
+
+	client := initClient()
+	var durationSeconds int32 = 3600
 
 	identityAuth := &model.TokenAuthIdentity{
 		Methods: []model.TokenAuthIdentityMethods{
@@ -88,11 +82,38 @@ func createTemporaryAccessKeyByToken(client *iam.IamClient) {
 		},
 	}
 
-	response, err := client.CreateTemporaryAccessKeyByToken(request)
+	tokenResp, err := client.CreateTemporaryAccessKeyByToken(request)
 	if err == nil {
-		fmt.Print(response)
-		fmt.Printf("%+v\n", response)
+		fmt.Println(tokenResp)
 	} else {
 		fmt.Println(err)
 	}
+	// 6. 获取登录Token(有效期30分钟)
+	loginTokenReq := model.CreateLoginTokenRequest{}
+	loginTokenReq.Body = &model.CreateLoginTokenRequestBody{
+		Auth: &model.LoginTokenAuth{
+			Securitytoken: &model.LoginTokenSecurityToken{
+				Access:          tokenResp.Credential.Access,
+				Secret:          tokenResp.Credential.Secret,
+				Id:              tokenResp.Credential.Securitytoken,
+				DurationSeconds: &durationSeconds,
+			},
+		},
+	}
+
+	loginTokenResp, err := client.CreateLoginToken(&loginTokenReq)
+	if err != nil {
+		panic(fmt.Sprintf("获取登录Token失败: %v", err))
+	}
+
+	// 7. 构造联合代理登录URL
+	baseURL := "https://auth.huaweicloud.com/authui/federation/login"
+	params := url.Values{}
+	params.Add("idp_login_url", "https://example.com/")                                                  // 企业系统登录地址
+	params.Add("service", "https://console.huaweicloud.com/"+service+"/?region=cn-north-4&locale="+lang) // 目标控制台地址
+	params.Add("logintoken", *loginTokenResp.XSubjectLoginToken)                                         // 登录Token
+
+	federationURL := fmt.Sprintf("%s?%s", baseURL, params.Encode())
+	fmt.Println("生成的联合代理登录URL:", federationURL)
+	return federationURL
 }

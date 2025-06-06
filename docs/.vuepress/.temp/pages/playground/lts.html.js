@@ -1,16 +1,3 @@
 import comp from "/Users/zhangjie/Desktop/observable-doc/observable/docs/.vuepress/.temp/pages/playground/lts.html.vue"
-const data = JSON.parse("{\"path\":\"/playground/lts.html\",\"title\":\"\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"playground/lts.md\"}")
+const data = JSON.parse("{\"path\":\"/playground/lts.html\",\"title\":\"统一可观测\",\"lang\":\"zh-CN\",\"frontmatter\":{\"layout\":\"Layout\",\"sidebar\":false,\"footer\":false,\"title\":\"统一可观测\",\"pageClass\":\"playground-page\"},\"headers\":[],\"git\":{},\"filePathRelative\":\"playground/lts.md\"}")
 export { comp, data }
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updatePageData) {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ data }) => {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  })
-}

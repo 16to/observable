@@ -34,15 +34,22 @@ export default defineUserConfig({
           children: [{
             text: 'AOM Demo',
             target: '_blank',
-            link: '/en/playground/',
-          }, {
-            text: 'APM Demo',
-            target: '_blank',
-            link: '/en/playground/apm/',
-          }, {
+            link: '/en/playground/aom',
+          }, 
+          {
             text: 'LTS Demo',
             target: '_blank',
-            link: '/en/playground/lts/',
+            link: '/en/playground/lts',
+          },
+          {
+            text: 'APM Demo',
+            target: '_blank',
+            link: '/en/playground/apm',
+          },  
+          {
+            text: 'CES Demo',
+            target: '_blank',
+            link: '/en/playground/ces',
           }
           ]
         }, {
@@ -65,17 +72,23 @@ export default defineUserConfig({
           text: '演示Demo',
           link: '/playground/',
           children: [{
-            text: '可观测演示',
+            text: 'AOM 统一可观测',
             target: '_blank',
-            link: '/playground/',
-          }, {
-            text: 'APM演示',
+            link: '/playground/aom',
+          },{
+            text: 'LTS 云日志',
             target: '_blank',
-            link: '/playground/apm/',
-          }, {
-            text: 'LTS演示',
+            link: '/playground/lts',
+          },
+          {
+            text: 'APM 应用性能',
             target: '_blank',
-            link: '/playground/lts/',
+            link: '/playground/apm',
+          },  
+          {
+            text: 'CES 云监控',
+            target: '_blank',
+            link: '/playground/ces',
           }
           ]
         }, {

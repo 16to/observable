@@ -1,4 +1,3 @@
-<template><div><p>bests</p>
-</div></template>
+<template><div><PlaygroundComponent service="lts" /></div></template>
 
 
