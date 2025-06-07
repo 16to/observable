@@ -1,9 +1,9 @@
 ---
 layout: Layout
-sidebar: false  # 隐藏侧边栏
+sidebar: false 
 footer: false
-title: 应用性能
-pageClass: "playground-page"  # 自定义样式
+title: APM
+pageClass: "playground-page"  
 ---
 
 <PlaygroundComponent service="apm2" lang="en-us"/>

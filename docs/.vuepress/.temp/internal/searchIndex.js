@@ -14,17 +14,17 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "",
-    "headers": [],
-    "path": "/links/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Home",
     "headers": [],
     "path": "/en/",
     "pathLocale": "/en/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/links/",
+    "pathLocale": "/",
     "extraFields": []
   },
   {
@@ -84,28 +84,28 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "统一可观测",
+    "title": "AOM",
     "headers": [],
     "path": "/en/playground/aom.html",
     "pathLocale": "/en/",
     "extraFields": []
   },
   {
-    "title": "应用性能",
+    "title": "APM",
     "headers": [],
     "path": "/en/playground/apm.html",
     "pathLocale": "/en/",
     "extraFields": []
   },
   {
-    "title": "云监控",
+    "title": "CES",
     "headers": [],
     "path": "/en/playground/ces.html",
     "pathLocale": "/en/",
     "extraFields": []
   },
   {
-    "title": "日志服务",
+    "title": "LTS",
     "headers": [],
     "path": "/en/playground/lts.html",
     "pathLocale": "/en/",

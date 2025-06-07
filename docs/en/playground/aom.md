@@ -1,9 +1,9 @@
 ---
 layout: Layout
-sidebar: false  # 隐藏侧边栏
+sidebar: false  
 footer: false
-title: 统一可观测
-pageClass: "playground-page"  # 自定义样式
+title: AOM
+pageClass: "playground-page"  
 ---
 
 <PlaygroundComponent service="aom2" lang="en-us"/>

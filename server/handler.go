@@ -22,6 +22,8 @@ func LoginHandler() http.HandlerFunc {
 			lang = "zh-cn" // 设置默认值
 		}
 
+		fmt.Println("service", service, "lang", lang)
+
 		loginUrl := getLoginUrl(service, lang)
 
 		fmt.Println("login_url:", loginUrl)

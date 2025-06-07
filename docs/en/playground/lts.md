@@ -1,9 +1,9 @@
 ---
 layout: Layout
-sidebar: false  # 隐藏侧边栏
+sidebar: false  
 footer: false
-title: 日志服务
-pageClass: "playground-page"  # 自定义样式
+title: LTS
+pageClass: "playground-page"  
 ---
 
 <PlaygroundComponent service="lts" lang="en-us" />

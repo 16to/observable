@@ -2,8 +2,15 @@
 import { onMounted } from 'vue'
 
 const props = defineProps({
-  service: String,
-  lang: String,
+  service: {
+    type: String,
+    default: 'AOM'
+    
+  },
+  lang: {
+    type: String,
+    default: 'zh-cn'
+  }
 })
 
 const fetchLoginUrl = async (service,lang) => {
@@ -22,6 +29,7 @@ const fetchLoginUrl = async (service,lang) => {
 
 onMounted( async () => {
   console.log(props.service)
+  console.log(props.lang)
   const loginUrl = await fetchLoginUrl(props.service,props.lang)
   window.location.href = loginUrl
 })
