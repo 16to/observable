@@ -1,6 +1,6 @@
 export const SEARCH_INDEX = [
   {
-    "title": "",
+    "title": "华为云可观测全景图",
     "headers": [],
     "path": "/",
     "pathLocale": "/",
@@ -14,7 +14,7 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Home",
+    "title": "Huawei Cloud Observability Panorama",
     "headers": [],
     "path": "/en/",
     "pathLocale": "/en/",
@@ -119,3 +119,16 @@ export const SEARCH_INDEX = [
     "extraFields": []
   }
 ]
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ searchIndex }) => {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  })
+}

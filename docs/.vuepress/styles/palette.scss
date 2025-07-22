@@ -1,0 +1,20 @@
+@use "sass:color"; // 必须引入 color 模块
+
+// 基础品牌色
+$c-brand: #0EB63B;
+
+// 使用 color.adjust() 替代 lighten()
+$c-brand-light: color.adjust($c-brand, $lightness: 10%);
+$c-brand-lighter: color.adjust($c-brand, $lightness: 20%);
+
+// CSS 变量（使用插值语法）
+:root {
+  --homepage-width: 1024px;
+  --vp-c-brand: #{$c-brand};
+  --vp-c-accent-bg: #{$c-brand};
+  --vp-c-accent-hover: #{$c-brand-light};
+  .secondary:hover {
+    color: #{$c-brand};
+    border-color: #{$c-brand};
+  }
+}

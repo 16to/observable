@@ -1,34 +1,32 @@
 ---
 lang: en-US
 home: true
-title: Home
-heroImage: https://vuejs.press/images/hero.png
+heroImage: /AOM.png
 actions:
   - text: Get Started
-    link: /get-started.html
+    link: /playground/aom.html
     type: primary
 
-  - text: Introduction
-    link: https://vuejs.press/guide/introduction.html
+  - text: Platform Introduction
+    link: https://www.huaweicloud.com/product/aom.html
     type: secondary
 
 features:
-  - title: Simplicity First
-    details: Minimal setup with markdown-centered project structure helps you focus on writing.
-  - title: Vue-Powered
-    details: Enjoy the dev experience of Vue, use Vue components in markdown, and develop custom themes with Vue.
-  - title: Performant
-    details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-  - title: Themes
-    details: Providing a default theme out of the box. You can also choose a community theme or create your own one.
-  - title: Plugins
-    details: Flexible plugin API, allowing plugins to provide lots of plug-and-play features for your site.
-  - title: Bundlers
-    details: Default bundler is Vite, while Webpack is also supported. Choose the one you like!
+  - title: Full-Scenario Access
+    details: Unified data access center supporting multiple scenarios and languages, compatible with four-level metric systems and multi-cloud data integration
+  - title: Full-Stack Data
+    details: Provides observability capabilities including user experience monitoring, application monitoring, managed Prometheus monitoring, and log query
+  - title: Out-of-the-Box
+    details: One-click integration for common monitoring data with expert-recommended preset baseline alerts and monitoring dashboards
+  - title: Unified Alerting
+    details: Centralized configuration for log alerts, metric alerts, and application performance alerts enables rapid issue detection
+  - title: Unified Dashboards
+    details: Multiple visualization chart types and 50+ built-in dashboard templates for easy operation
+  - title: Unified Analysis
+    details: Provides correlated analysis of metrics, logs and traces, root cause analysis, and scenario-based analysis capabilities
 
-footer: MIT Licensed | Copyright © 2018-present VuePress Community
+footer: Copyright ©2025 Huaweicloud.com
 ---
 
-This is the content of home page. Check [Home Page Docs][default-theme-home] for more details.
-
-[default-theme-home]: https://vuejs.press/reference/default-theme/frontmatter.html#home-page
+# <center>Huawei Cloud Observability Panorama</center>
+![Huawei Cloud Observability Panorama](/1-en.png)

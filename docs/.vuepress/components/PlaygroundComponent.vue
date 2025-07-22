@@ -21,7 +21,7 @@ const fetchLoginUrl = async (service,lang) => {
     }
     const data = await response.json()
     console.log(data)
-    return data.login_url
+    return data.login_url || '/'
   } catch (error) {
     console.error('Error fetching login URL:', error)
   }

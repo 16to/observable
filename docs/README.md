@@ -1,33 +1,32 @@
 ---
 lang: zh-CN
 home: true
-heroImage: https://vuejs.press/images/hero.png
+heroImage: /AOM.png
 actions:
-  - text: Get Started
-    link: /get-started.html
+  - text: 开始体验
+    link: /playground/aom.html
     type: primary
 
-  - text: Introduction
-    link: https://vuejs.press/guide/introduction.html
+  - text: 平台介绍
+    link: https://www.huaweicloud.com/product/aom.html
     type: secondary
 
 features:
-  - title: Simplicity First
-    details: Minimal setup with markdown-centered project structure helps you focus on writing.
-  - title: Vue-Powered
-    details: Enjoy the dev experience of Vue, use Vue components in markdown, and develop custom themes with Vue.
-  - title: Performant
-    details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-  - title: Themes
-    details: Providing a default theme out of the box. You can also choose a community theme or create your own one.
-  - title: Plugins
-    details: Flexible plugin API, allowing plugins to provide lots of plug-and-play features for your site.
-  - title: Bundlers
-    details: Default bundler is Vite, while Webpack is also supported. Choose the one you like!
+  - title: 全场景接入
+    details: 多场景、多语言统一数据接入中心，支持四层指标体系，多云场景数据接入
+  - title: 全栈数据
+    details: 提供用户体验监控、应用监控、托管Prometheus监控、日志查询等观测能力
+  - title: 开箱即用
+    details: 常用监控数据一键集成，根据专家建议预设底线告警以及监控图表
+  - title: 统一告警
+    details: 用户可统一配置日志告警、指标告警、应用性能告警，可快速发现问题
+  - title: 统一大盘
+    details: 多种可视化图表分析和50+内置仪表盘模版，简单易用
+  - title: 统一分析
+    details: 提供指标、日志、调用链数据关联分析、根因分析、场景化分析等统一分析能力
 
-footer: MIT Licensed | Copyright © 2018-present VuePress Community
+footer: Copyright ©2025 Huaweicloud.com
 ---
 
-This is the content of home page. Check [Home Page Docs][default-theme-home] for more details.
-
-[default-theme-home]: https://vuejs.press/reference/default-theme/frontmatter.html#home-page
+# <center>华为云可观测全景图</center>
+![华为云可观测全景图](/1.png)
