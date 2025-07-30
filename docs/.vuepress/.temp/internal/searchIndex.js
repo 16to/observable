@@ -14,6 +14,13 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "Huawei Cloud Observability Panorama",
+    "headers": [],
+    "path": "/en/",
+    "pathLocale": "/en/",
+    "extraFields": []
+  },
+  {
     "title": "",
     "headers": [],
     "path": "/links/",
@@ -21,10 +28,10 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Huawei Cloud Observability Panorama",
+    "title": "",
     "headers": [],
-    "path": "/en/",
-    "pathLocale": "/en/",
+    "path": "/news/",
+    "pathLocale": "/",
     "extraFields": []
   },
   {
@@ -52,13 +59,6 @@ export const SEARCH_INDEX = [
     "title": "统一可观测",
     "headers": [],
     "path": "/playground/lts.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/news/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -119,16 +119,3 @@ export const SEARCH_INDEX = [
     "extraFields": []
   }
 ]
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ searchIndex }) => {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  })
-}

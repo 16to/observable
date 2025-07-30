@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.20" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (useChoice === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (useChoice === 'dark' || systemStatus) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <link rel="icon" href="/favicon.ico"><title>华为云可观测</title><meta name="description" content="基于指标、链路、日志、事件全景数据监控，为您提供从应用层到基础设施的全链路、端到端的统一观测，提高运维排障效率">
+    <link rel="stylesheet" href="/assets/css/styles.584f5261.css">
+    <link rel="preload" href="/assets/js/runtime~app.e1b1ec23.js" as="script"><link rel="preload" href="/assets/css/styles.584f5261.css" as="style"><link rel="preload" href="/assets/js/192.3faba30a.js" as="script"><link rel="preload" href="/assets/js/app.7d737aa6.js" as="script">
+    <link rel="prefetch" href="/assets/js/en_index.html.4d2707f0.js" as="script"><link rel="prefetch" href="/assets/js/index.html.d6dd45c3.js" as="script"><link rel="prefetch" href="/assets/js/en_playground_aom.html.69483147.js" as="script"><link rel="prefetch" href="/assets/js/en_playground_apm.html.c6c8293c.js" as="script"><link rel="prefetch" href="/assets/js/en_playground_ces.html.6b4fe3dc.js" as="script"><link rel="prefetch" href="/assets/js/en_playground_lts.html.f4ce3bed.js" as="script"><link rel="prefetch" href="/assets/js/playground_apm.html.5e582e38.js" as="script"><link rel="prefetch" href="/assets/js/playground_aom.html.2be2261e.js" as="script"><link rel="prefetch" href="/assets/js/playground_ces.html.6079225f.js" as="script"><link rel="prefetch" href="/assets/js/playground_lts.html.806a0781.js" as="script"><link rel="prefetch" href="/assets/js/en_bests_index.html.e803d0d1.js" as="script"><link rel="prefetch" href="/assets/js/en_links_index.html.0654372c.js" as="script"><link rel="prefetch" href="/assets/js/en_news_index.html.00f7ade5.js" as="script"><link rel="prefetch" href="/assets/js/bests_index.html.b121c904.js" as="script"><link rel="prefetch" href="/assets/js/links_index.html.95ecefe9.js" as="script"><link rel="prefetch" href="/assets/js/news_index.html.20577d7f.js" as="script"><link rel="prefetch" href="/assets/js/404.html.4de3858d.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container" vp-container data-v-145c1213><main class="page" data-v-145c1213><div vp-content data-v-145c1213><h1 data-v-145c1213>404</h1><blockquote data-v-145c1213>That&#39;s a Four-Oh-Four.</blockquote><a class="route-link" href="/" data-v-145c1213>Take me home</a></div></main></div><!--[--><!----><!--]--><!--]--></div>
+    <script src="/assets/js/runtime~app.e1b1ec23.js" defer></script><script src="/assets/js/192.3faba30a.js" defer></script><script src="/assets/js/app.7d737aa6.js" defer></script>
+  </body>
+</html>
