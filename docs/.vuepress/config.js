@@ -8,7 +8,7 @@ export default defineUserConfig({
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
-  dest:'./static',
+  dest: './static',
   lang: 'zh-CN',
   locales: {
     '/en/': {
@@ -29,42 +29,159 @@ export default defineUserConfig({
       '/en/': {
         selectLanguageText: '🌐',
         selectLanguageName: 'English',
-        navbar: [{
-          link: '/en/'
-        }, {
-          text: 'Playground',
-          link: '/en/playground/',
-          children: [{
-            text: 'AOM Demo',
-            target: '_blank',
-            link: '/en/playground/aom',
-          }, 
+        navbar: [
           {
-            text: 'LTS Demo',
-            target: '_blank',
-            link: '/en/playground/lts',
+            link: '/en/'
           },
           {
-            text: 'CES Demo',
-            target: '_blank',
-            link: '/en/playground/ces',
+            text: 'Demo Showcase',
+            link: '/playground/',
+            children: [
+              {
+                text: 'AOM playground',
+                target: '_blank',
+                link: '/playground/aom',
+              },
+              {
+                text: 'LTS playground',
+                target: '_blank',
+                link: '/playground/lts',
+              },
+              {
+                text: 'APM playground',
+                target: '_blank',
+                link: '/playground/apm',
+              },
+              {
+                text: 'CES playground',
+                target: '_blank',
+                link: '/playground/ces',
+              }
+            ]
           },
           {
-            text: 'APM Demo',
+            text: 'Best Practices',
+            link: '/bests/',
+            children: [
+              {
+                text: 'Best Practices Summary',
+                link: '/bests/all',
+              },
+              {
+                text: 'Third-party Cloud Providers or IDC Integration',
+                link: '/bests/third-party',
+              },
+              {
+                text: 'Embedding into User-built Systems',
+                link: '/bests/embedded',
+              },
+              {
+                text: 'Multi-account Unified Monitoring',
+                link: '/bests/multi-account',
+              },
+              {
+                text: 'Log Processing Cases',
+                link: '/bests/log-processing',
+              },
+              {
+                text: 'Log SQL Query',
+                link: '/bests/log-processing',
+              },
+              {
+                text: 'AIOps Practices',
+                link: '/bests/ai-ops',
+              },
+              {
+                text: 'Alert Rule Recommendations',
+                link: '/bests/alert-rules',
+              },
+              {
+                text: 'Performance Analysis Cases',
+                link: '/bests/performance-analysis',
+              },
+              {
+                text: 'User Experience Monitoring',
+                link: '/bests/user-experience',
+              },
+              {
+                text: 'Self-built Middleware Monitoring',
+                link: '/bests/self-built-middleware',
+              },
+              {
+                text: 'ELK Log Migration to Cloud',
+                link: '/bests/elk-migration',
+              },
+              {
+                text: 'Skywalking Migration to Cloud',
+                link: '/bests/skywalking-migration',
+              },
+              {
+                text: 'Pre-aggregated Metrics',
+                link: '/bests/pre-aggregation',
+              },
+              {
+                text: 'Billing Statistics and Estimation',
+                link: '/bests/billing-estimation',
+              },
+              {
+                text: 'Cost Optimization Recommendations',
+                link: '/bests/price',
+              }
+            ]
+          },
+          {
+            text: 'Product Links',
+            children: [
+              {
+                text: 'Console',
+                children: [
+                  {
+                    text: 'Unified Observability',
+                    link: 'https://console.huaweicloud.com/aom2/',
+                  },
+                  {
+                    text: 'Log Service',
+                    link: 'https://console.huaweicloud.com/lts/',
+                  },
+                  {
+                    text: 'Application Performance',
+                    link: 'https://console.huaweicloud.com/apm2/',
+                  },
+                  {
+                    text: 'Cloud Monitoring',
+                    link: 'https://console.huaweicloud.com/ces/',
+                  }
+                ]
+              },
+              {
+                text: 'Documentation Links',
+                children: [
+                  {
+                    text: 'Unified Observability',
+                    link: 'https://support.huaweicloud.com/aom/index.html',
+                  },
+                  {
+                    text: 'Log Service',
+                    link: 'https://support.huaweicloud.com/lts/index.html',
+                  },
+                  {
+                    text: 'Application Performance',
+                    link: 'https://support.huaweicloud.com/apm/index.html',
+                  },
+                  {
+                    text: 'Cloud Monitoring',
+                    link: 'https://support.huaweicloud.com/ces/index.html',
+                  }
+                ]
+              }
+            ],
+          },
+          {
+            text: 'Latest News',
             target: '_blank',
-            link: '/en/playground/apm',
+            link: 'https://support.huaweicloud.com/wtsnew-aom/index.html'
           }
-          ]
-        }, {
-          text: 'Practices',
-          link: '/en/bests/'
-        }, {
-          text: 'News',
-          link: '/en/news/'
-        }, {
-          text: 'Links',
-          link: '/en/links/'
-        }],
+        ],
       },
       '/': {
         selectLanguageText: '🌐',
@@ -78,85 +195,125 @@ export default defineUserConfig({
             text: 'AOM 统一可观测',
             target: '_blank',
             link: '/playground/aom',
-          },{
+          }, {
             text: 'LTS 云日志',
             target: '_blank',
             link: '/playground/lts',
           },
           {
-            text: 'CES 云监控',
-            target: '_blank',
-            link: '/playground/ces',
-          },          
-          {
             text: 'APM 应用性能',
             target: '_blank',
             link: '/playground/apm',
+          },
+          {
+            text: 'CES 云监控',
+            target: '_blank',
+            link: '/playground/ces',
           }
           ]
         }, {
           text: '最佳实践',
           link: '/bests/',
           children: [
-          {
-            text: '最佳实践汇总',
-            link: '/bests/all',
-          },{
-            text: '第三方云厂商或IDC机房接入',
-            link: '/bests/third-party',
-          },
-          {
-            text: '内嵌到用户自建系统',
-            link: '/bests/embedded',
-          },          
-          {
-            text: '多账号聚合统一监控',
-            link: '/bests/multi-account',
-          },          
-          {
-            text: '日志加工案例',
-            link: '/bests/log-processing',
-          },
-          {
-            text: '智能运维实践',
-            link: '/bests/ai-ops',
-          },          
-          {
-            text: '告警规则建议',
-            link: '/bests/alert-rules',
-          },          
-          {
-            text: '性能剖析案例',
-            link: '/bests/performance-analysis',
-          },          
-          {
-            text: '用户体验监控',
-            link: '/bests/user-experience',
-          },{
-            text: '自建中间件监控',
-            link: '/bests/self-built-middleware',
-          },{
-            text: 'ELK日志搬迁上云',
-            link: '/bests/elk-migration',
-          },{
-            text: 'Skywalking搬迁上云',
-            link: '/bests/skywalking-migration',
-          },{
-            text: '预聚合指标',
-            link: '/bests/pre-aggregation',
-          },{
-            text: '计费统计和估算',
-            link: '/bests/billing-estimation',
-          },{
-            text: '费用优化推荐',
-            link: '/bests/price',
-          }]
-        }, {
-          text: '最新动态',
-          link: '/news/'
+            {
+              text: '最佳实践汇总',
+              link: '/bests/all',
+            }, {
+              text: '第三方云厂商或IDC机房接入',
+              link: '/bests/third-party',
+            },
+            {
+              text: '内嵌到用户自建系统',
+              link: '/bests/embedded',
+            },
+            {
+              text: '多账号聚合统一监控',
+              link: '/bests/multi-account',
+            },
+            {
+              text: '日志加工案例',
+              link: '/bests/log-processing',
+            },
+            {
+              text: '日志SQL查询',
+              link: '/bests/log-processing',
+            },
+            {
+              text: '智能运维实践',
+              link: '/bests/ai-ops',
+            },
+            {
+              text: '告警规则建议',
+              link: '/bests/alert-rules',
+            },
+            {
+              text: '性能剖析案例',
+              link: '/bests/performance-analysis',
+            },
+            {
+              text: '用户体验监控',
+              link: '/bests/user-experience',
+            }, {
+              text: '自建中间件监控',
+              link: '/bests/self-built-middleware',
+            }, {
+              text: 'ELK日志搬迁上云',
+              link: '/bests/elk-migration',
+            }, {
+              text: 'Skywalking搬迁上云',
+              link: '/bests/skywalking-migration',
+            }, {
+              text: '预聚合指标',
+              link: '/bests/pre-aggregation',
+            }, {
+              text: '计费统计和估算',
+              link: '/bests/billing-estimation',
+            }, {
+              text: '费用优化推荐',
+              link: '/bests/price',
+            }]
         }, {
           text: '产品链接',
-          link: '/links/'
+          children: [
+            {
+              text: '控制台',
+              children: [
+                {
+                  text: '统一可观测',
+                  link: 'https://console.huaweicloud.com/aom2/',
+                }, {
+                  text: '日志服务',
+                  link: 'https://console.huaweicloud.com/lts/',
+                }, {
+                  text: '应用性能',
+                  link: 'https://console.huaweicloud.com/apm2/',
+                }, {
+                  text: '云监控',
+                  link: 'https://console.huaweicloud.com/ces/',
+                }]
+            },
+            {
+              text: '文档链接',
+              children: [
+                {
+                  text: '统一可观测',
+                  link: 'https://support.huaweicloud.com/aom/index.html',
+                }, {
+                  text: '日志服务',
+                  link: 'https://support.huaweicloud.com/lts/index.html',
+                }, {
+                  text: '应用性能',
+                  link: 'https://support.huaweicloud.com/apm/index.html',
+                }, {
+                  text: '云监控',
+                  link: 'https://support.huaweicloud.com/ces/index.html',
+                }]
+            }
+          ],
+        }, {
+          text: '最新动态',
+          target: '_blank',
+          link: 'https://support.huaweicloud.com/wtsnew-aom/index.html'
         }],
       },
     },

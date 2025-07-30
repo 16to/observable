@@ -14,13 +14,6 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Huawei Cloud Observability Panorama",
-    "headers": [],
-    "path": "/en/",
-    "pathLocale": "/en/",
-    "extraFields": []
-  },
-  {
     "title": "",
     "headers": [],
     "path": "/links/",
@@ -28,10 +21,10 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "",
+    "title": "Huawei Cloud Observability Panorama",
     "headers": [],
-    "path": "/news/",
-    "pathLocale": "/",
+    "path": "/en/",
+    "pathLocale": "/en/",
     "extraFields": []
   },
   {
@@ -59,6 +52,13 @@ export const SEARCH_INDEX = [
     "title": "统一可观测",
     "headers": [],
     "path": "/playground/lts.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/news/",
     "pathLocale": "/",
     "extraFields": []
   },
